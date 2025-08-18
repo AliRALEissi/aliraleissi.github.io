@@ -374,11 +374,20 @@
           <h1 class="display-4 fw-bold mb-3">Ali Alessa</h1>
           <h2 class="h3 mb-4">Full-Stack Developer & <span class="text-gradient">Cybersecurity Specialist</span></h2>
           <p class="lead mb-4">I build secure, efficient systems that automate workflows and enhance productivity. Passionate about creating solutions that solve real-world problems.</p>
-          <div class="d-flex flex-wrap gap-2">
-            <a class="btn btn-light btn-lg" href="#projects">View Projects</a>
-            <a class="btn btn-outline-light btn-lg" href="https://github.com/AliRALEissi.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-github me-2"></i>GitHub</a>
-            <a class="btn btn-outline-light btn-lg" href="https://www.linkedin.com/in/ali-alessa-03318630b.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin me-2"></i>LinkedIn</a>
-          </div>
+         <div class="d-flex flex-wrap gap-2">
+        <a class="btn btn-light btn-lg" href="#projects">View Projects</a>
+          <a class="btn btn-outline-light btn-lg" href="Ali Alessa.pdf" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-pdf me-2"></i>View CV
+                                                                    </a>
+             <a class="btn btn-outline-light btn-lg" href="https://github.com/AliRALEissi" target="_blank" rel="noopener">
+             <i class="fab fa-github me-2"></i>GitHub
+                                          </a>
+                       <a class="btn btn-outline-light btn-lg" href="https://www.linkedin.com/in/ali-alessa-03318630b" target="_blank" rel="noopener">
+                        <i class="fab fa-linkedin me-2"></i>LinkedIn
+  </a>
+</div>
+
+          
         </div>
         <div class="col-lg-6 text-center mt-5 mt-lg-0 animate-fade" style="animation-delay: 0.2s">
           <img src="logo.png" alt="Ali Alessa" class="profile-img rounded-circle shadow-lg">
@@ -568,6 +577,25 @@
       </div>
     </div>
   </section>
+<section id="certifications" class="container-section" aria-labelledby="certs-title">
+  <div class="container">
+    <h2 id="certs-title" class="section-title">Certifications</h2>
+    <ul class="list-group shadow-sm">
+      <li class="list-group-item">
+        <i class="fas fa-certificate text-primary me-2"></i>
+        Cybersecurity Foundations — SATR
+      </li>
+      <li class="list-group-item">
+        <i class="fas fa-certificate text-primary me-2"></i>
+        Linux Certification — SATR
+      </li>
+      <li class="list-group-item">
+        <i class="fas fa-certificate text-primary me-2"></i>
+        CompTIA Security+ (In Progress)
+      </li>
+    </ul>
+  </div>
+</section>
 
   <!-- ABOUT -->
   <section id="about" class="container-section">
@@ -818,7 +846,7 @@
                 <strong>Impact:</strong> Projected to reduce repetitive tasks by ~50% and save hundreds of man-hours annually.
               </div>
             `,
-            code: 'https://github.com/your-github/samco'
+            code: 'https://github.com/samco'
           },
           kali: {
             title: 'Kali Linux Security Lab',
@@ -853,7 +881,7 @@
                 All exercises are conducted in isolated environments to ensure safe and ethical practice.
               </div>
             `,
-            code: 'https://github.com/your-github/kali-lab'
+            code: 'https://github.com/kali-lab'
           },
           surgipro: {
             title: 'Surgipro',
@@ -888,7 +916,7 @@
                 Designed with input from medical professionals to ensure usability for hospital staff.
               </div>
             `,
-            code: 'https://github.com/your-github/surgipro'
+            code: 'https://github.com/surgipro'
           }
         };
         const p = projects[key] || {title:'Project', desc:'No details', code:'#'};
