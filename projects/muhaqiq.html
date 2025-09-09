@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhaqiq - Secure Case Management System | Ali Alessa</title>
+    <meta name="description" content="Internal case-management web application with RBAC and secure data handling">
+    
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Ali<span class="accent">Alessa</span></a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html#home" class="nav-link">Home</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="project-detail">
+        <div class="container">
+            <div class="project-header">
+                <h1 class="project-title">Muhaqiq - Secure Case Management System</h1>
+                <p class="project-subtitle">Internal web application with role-based access control and secure data handling</p>
+                <div class="project-meta">
+                    <span class="meta-item">🏢 Saudi Marketing Company</span>
+                    <span class="meta-item">📅 2024 - Present</span>
+                    <span class="meta-item">👥 Internal Tool</span>
+                </div>
+            </div>
+
+            <div class="project-image-hero">
+                <img src="../assets/images/muhaqiq-hero.jpg" alt="Muhaqiq System Dashboard" loading="lazy">
+            </div>
+
+            <div class="project-content">
+                <section class="project-section">
+                    <h2>🎯 Project Overview</h2>
+                    <p>Muhaqiq is a comprehensive case management system designed to centralize case intake, tracking, and resolution processes across multiple departments. The system prioritizes data security and user access control while maintaining high performance and usability.</p>
+                    
+                    <div class="highlight-box">
+                        <h3>🔐 Security First Approach</h3>
+                        <p>Built with cybersecurity principles from the ground up, implementing OWASP security guidelines and secure coding practices throughout the development process.</p>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>🛠️ Technical Architecture</h2>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <h4>Frontend</h4>
+                            <ul>
+                                <li>HTML5 semantic structure</li>
+                                <li>CSS3 with responsive design</li>
+                                <li>Vanilla JavaScript (ES6+)</li>
+                                <li>Progressive Web App features</li>
+                            </ul>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Backend</h4>
+                            <ul>
+                                <li>PHP 8.1 with OOP principles</li>
+                                <li>MySQL 8.0 database</li>
+                                <li>RESTful API design</li>
+                                <li>Session management</li>
+                            </ul>
+                        </div>
+                        <div class="tech-item">
+                            <h4>Security</h4>
+                            <ul>
+                                <li>Role-Based Access Control (RBAC)</li>
+                                <li>Input validation & sanitization</li>
+                                <li>SQL injection prevention</li>
+                                <li>XSS protection</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>🔒 Security Implementation</h2>
+                    <div class="security-features">
+                        <div class="security-feature">
+                            <h4>🛡️ Role-Based Access Control</h4>
+                            <p>Implemented granular permission system with role inheritance and least privilege principles.</p>
+                            <pre><code class="language-php">
+// User permission checking
+if (!$user->hasPermission('case.edit') || !$case->canEditBy($user)) {
+    throw new UnauthorizedException('Insufficient permissions');
+}
+                            </code></pre>
+                        </div>
+                        
+                        <div class="security-feature">
+                            <h4>🔐 Input Validation</h4>
+                            <p>Multi-layer validation including client-side, server-side, and database constraints.</p>
+                            <pre><code class="language-php">
+// Server-side validation example
+$validator = new CaseValidator([
+    'title' => 'required|string|max:255',
+    'description' => 'required|string|max:2000',
+    'priority' => 'required|in:low,medium,high,critical'
+]);
+                            </code></pre>
+                        </div>
+
+                        <div class="security-feature">
+                            <h4>🗃️ Secure Database Operations</h4>
+                            <p>Prepared statements and parameterized queries to prevent SQL injection attacks.</p>
+                            <pre><code class="language-php">
+// Prepared statement example
+$stmt = $pdo->prepare("SELECT * FROM cases WHERE user_id = ? AND status = ?");
+$stmt->execute([$userId, $status]);
+                            </code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>📊 Key Features</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">📝</div>
+                            <h4>Case Management</h4>
+                            <p>Complete case lifecycle management with status tracking, assignments, and automated notifications.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h4>User Management</h4>
+                            <p>Comprehensive user administration with role assignments and permission management.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📈</div>
+                            <h4>Analytics Dashboard</h4>
+                            <p>Real-time reporting and analytics with customizable charts and KPI tracking.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔍</div>
+                            <h4>Advanced Search</h4>
+                            <p>Full-text search with filters, sorting, and advanced query capabilities.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">📱</div>
+                            <h4>Mobile Responsive</h4>
+                            <p>Fully responsive design optimized for desktop, tablet, and mobile devices.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🔐</div>
+                            <h4>Audit Logging</h4>
+                            <p>Comprehensive audit trail with user actions, timestamps, and data changes.</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>📈 Results & Impact</h2>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-number">60%</div>
+                            <div class="result-label">Faster Case Processing</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">100%</div>
+                            <div class="result-label">Security Compliance</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">40%</div>
+                            <div class="result-label">Reduced Manual Work</div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-number">0</div>
+                            <div class="result-label">Security Incidents</div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="project-section">
+                    <h2>🎓 Lessons Learned</h2>
+                    <ul class="lessons-list">
+                        <li><strong>Security by Design:</strong> Implementing security measures from the beginning is far more effective than retrofitting them later.</li>
+                        <li><strong>User Experience:</strong> Security doesn't have to compromise usability when properly designed and implemented.</li>
+                        <li><strong>Performance Optimization:</strong> Proper indexing and query optimization are crucial for application scalability.</li>
+                        <li><strong>Documentation:</strong> Comprehensive documentation accelerates development and maintenance processes.</li>
+                    </ul>
+                </section>
+            </div>
+
+            <div class="project-navigation">
+                <a href="../index.html#projects" class="btn btn-secondary">← Back to Projects</a>
+                <a href="surgipro.html" class="btn btn-primary">Next Project →</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Ali Alessa. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
