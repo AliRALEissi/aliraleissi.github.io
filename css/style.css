@@ -976,3 +976,17 @@ a:hover {
         page-break-inside: avoid;
     }
 }
+.btn-accent {
+    background-color: #57a5c9;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.btn-accent:hover {
+    background-color: #84bada;
+    color: #000;
+}
